@@ -9,7 +9,7 @@ void setup ()
 {
   size(400, 400);
   textAlign(CENTER, CENTER);
- 
+  
   Interactive.make( this );
   buttons = new MSButton[NUM_ROWS][NUM_COLS];
   for (int r = 0; r < NUM_ROWS; r++)
@@ -84,8 +84,8 @@ public class MSButton
     //your code here
     if (mouseButton ==RIGHT) {
       marked=!marked;
-      if (marked==false)
-        clicked=false;
+      //if (marked==false)
+       // clicked=false;
     } else if (bombs.contains(this))
       displayLosingMessage();
     else if (countBombs(r, c)>0) {
