@@ -57,7 +57,7 @@ public class MSButton
   private float x, y, width, height;
   private boolean clicked, marked;
   private String label;
-  public MSButton ( int rr, int cc )
+  public MSButton (int rr, int cc)
   {
     width = 400/NUM_COLS;
     height = 400/NUM_ROWS;
@@ -67,7 +67,7 @@ public class MSButton
     y = r*height;
     label = "";
     marked = clicked = false;
-    Interactive.add( this ); // register it with the manager
+    Interactive.add(this); // register it with the manager
   }
   public boolean isMarked()
   {
@@ -114,12 +114,12 @@ public class MSButton
   {    
     if (marked)
       fill(0);
-    else if ( clicked && bombs.contains(this) ) 
+    else if (clicked && bombs.contains(this)) 
       fill(255, 0, 0);
     else if (clicked)
-      fill( 200 );
+      fill(200);
     else 
-    fill( 100 );
+    fill(100);
     rect(x, y, width, height);
     fill(0);
     text(label, x+width/2, y+height/2);
